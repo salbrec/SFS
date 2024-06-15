@@ -1,0 +1,2 @@
+,model,score_val,pred_time_val,fit_time_marginal,fit_order
+0,TemporalFusionTransformer,-0.04133858389121871,0.03461956977844238,395.41679978370667,1

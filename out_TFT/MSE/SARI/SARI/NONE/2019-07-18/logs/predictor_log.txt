@@ -1,0 +1,84 @@
+Beginning AutoGluon training... Time limit = 150000s
+AutoGluon will save models to 'secout_TFT/MSE/SARI/SARI/NONE/2019-07-18'
+=================== System Info ===================
+AutoGluon Version:  1.1.0
+Python Version:     3.10.5
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP Tue Sep 12 22:26:13 UTC 2017
+CPU Count:          2
+GPU Count:          0
+Memory Avail:       73.05 GB / 125.81 GB (58.1%)
+Disk Space Avail:   12227.49 GB / 12288.00 GB (99.5%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MSE,
+ 'hyperparameters': {'TemporalFusionTransformerModel': {}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 21,
+ 'quantile_levels': [0.05,
+                     0.1,
+                     0.15,
+                     0.2,
+                     0.25,
+                     0.3,
+                     0.35,
+                     0.4,
+                     0.45,
+                     0.5,
+                     0.55,
+                     0.6,
+                     0.65,
+                     0.7,
+                     0.75,
+                     0.8,
+                     0.85,
+                     0.9,
+                     0.95],
+ 'random_seed': 482020,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'SARI',
+ 'time_limit': 150000,
+ 'verbosity': 4}
+
+Inferred time series frequency: 'D'
+Provided train_data has 2628 rows, 1 time series. Median time series length is 2628 (min=2628, max=2628). 
+
+Provided data contains following columns:
+	target: 'SARI'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MSE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2024-04-30 09:01:04
+Models that will be trained: ['TemporalFusionTransformer']
+Training timeseries model TemporalFusionTransformer. Training for up to 149997.5s of the 149997.5s of remaining time.
+	Window 0
+GluonTS logging is turned on during training. Note that losses reported by GluonTS may not correspond to those specified via `eval_metric`.
+	Training on device 'cpu'
+Removing lightning_logs directory secout_TFT/MSE/SARI/SARI/NONE/2019-07-18/models/TemporalFusionTransformer/W0/lightning_logs
+Predicting with model TemporalFusionTransformer/W0
+		-0.0413      = Validation score (-MSE)
+		395.399 s    = Training runtime
+		0.035   s    = Prediction runtime
+	-0.0413       = Validation score (-MSE)
+	395.42  s     = Training runtime
+	0.03    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['TemporalFusionTransformer']
+Total runtime: 395.50 s
+Best model: TemporalFusionTransformer
+Best model score: -0.0413
+Model not specified in predict, will default to the model with the best validation score: TemporalFusionTransformer
+Found no cached predictions
+Prediction order: {'TemporalFusionTransformer'}
+Predicting with model TemporalFusionTransformer/W0
+Predicting with model TemporalFusionTransformer
+Cached predictions saved to secout_TFT/MSE/SARI/SARI/NONE/2019-07-18/models/cached_predictions.pkl
+Generating leaderboard for all models trained
