@@ -1,5 +1,5 @@
 # SFS
-#### Code and experiemental results for the SARI Forecasting System
+### Code and experiemental results for the SARI Forecasting System
 
 The script `model_training_forecasting.py` is applied for a combination of each algorithm, split date, and set of covariates. The split date defines the data on which the time series is split into training and testing data. This example trains a TFT model on all data available until July 17, 2019 (inclusive), using the laboratory component (LC) covariates.  
 ```
